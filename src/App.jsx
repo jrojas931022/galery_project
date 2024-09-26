@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
-import { Imagen_1 } from './components/Imagen_1'
+import { Imagen_1 } from './components/Imagen_1';
+import { Imagen_2 } from './components/imagen_2';
+import { Imagen_3 } from './components/imagen_3';
+import { Imagen_4 } from './components/imagen_4';
+import { Imagen_5 } from './components/imagen_5';
+import { Imagen_6 } from './components/imagen_6';
+import { Navigation } from './components/navigation';
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
+      <BrowserRouter>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1 className='text-center my-3'>Galery Project</h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <Imagen_1/>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='container d-flex justify-content-center'>
+      <Routes>
+        <Route path='/imagen_1'element={<Imagen_1 className=".main-img-container" />}/>
+          <Route path='/imagen_2'element={<Imagen_2 className=".main-img-container" />}/>
+          <Route path='/imagen_3'element={<Imagen_3 className=".main-img-container" />}/>
+          <Route path='/imagen_4'element={<Imagen_4 className=".main-img-container" />}/>
+          <Route path='/imagen_5'element={<Imagen_5 className=".main-img-container" />}/>
+          <Route path='/imagen_6'element={<Imagen_6 className=".main-img-container" />}/>
+        </Routes>    
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="container">
+      <Navigation />
+        
+      </div>
+      </BrowserRouter>
     </>
   )
 }
