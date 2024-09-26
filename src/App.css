@@ -38,29 +38,19 @@
 /* ===================================
     Estilos para el contenedor de miniaturas
    =================================== */
-.thumbnail-container {
-  display: flex; /* Usar flexbox para las miniaturas */
-  flex-wrap: wrap; /* Permitir que las miniaturas se distribuyan en varias filas */
-  justify-content: center; /* Centrar las miniaturas horizontalmente */
-  gap: 10px; /* Espacio de 10px entre miniaturas */
-  height: 150px; /* Altura fija del contenedor de miniaturas */
-  align-items: center; /* Alinear verticalmente las miniaturas */
-  margin: 0; /* Sin margen adicional */
-  padding: 0; /* Sin relleno adicional */
-}
+   .thumbnail-container {  
+    display: flex;  
+    justify-content: center;  
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas si es necesario */  
+  }  
 
 /* ===================================
     Estilos para el tamaño y diseño de las miniaturas
    =================================== */
-.thumbnail-image-size {
-  width: 100px;  /* Fijar el ancho de las miniaturas a 100px */
-  height: 100px; /* Fijar la altura de las miniaturas a 100px */
-  border-radius: 5px; /* Bordes redondeados de 5px para las miniaturas */
-  overflow: hidden; /* Ocultar cualquier parte de la imagen que sobresalga */
-  position: relative; /* Necesario para posicionar el pie de figura */
-  margin: 0; /* Sin margen adicional */
-  padding: 0; /* Sin relleno adicional */
-}
+   .thumbnail-image-size {  
+    width: 100px; /* Ajusta el tamaño según sea necesario */  
+    text-align: center; /* Centra el texto debajo de la imagen */  
+  }  
 
 .thumbnail-image-size img {
   width: 100%; /* Asegurar que la imagen ocupe todo el ancho del contenedor */
@@ -71,15 +61,11 @@
 /* ===================================
     Estilos para los enlaces de las miniaturas
    =================================== */
-.links {
-  margin: 0; /* Sin márgenes adicionales */
-  padding: 0; /* Sin relleno adicional */
-  text-decoration: none; /* Eliminar el subrayado de los enlaces */
-  color: white; /* Texto de los enlaces en blanco */
-  text-align: center; /* Centrar el texto dentro del enlace */
-  box-shadow: 0 2px 2px rgba(0,0, 0,1); /* Añadir una sombra ligera alrededor del enlace */
-  transition: all 0.25s; /* Suavizar las transiciones */
-}
+   .links {  
+    text-decoration: none; /* Elimina el subrayado de los enlaces */  
+    color: inherit; /* Hereda el color del texto */  
+  }  
+  
 
 .links:hover {
   transform: translateY(-15px); /* Desplazar el enlace hacia arriba al hacer hover */
@@ -125,3 +111,8 @@ figure {
 h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra ligera para el texto del título */
 }
+
+.mx-2 {  
+  margin-left: 0.5rem; /* Espaciado horizontal entre las imágenes */  
+  margin-right: 0.5rem;  
+}  
